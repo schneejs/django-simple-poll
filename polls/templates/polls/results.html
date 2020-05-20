@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Results of {{ question.text }}</title>
+        <body>
+            <p>Question: <strong>{{ question.text }}</strong></p>
+            <ul>
+            {% for choice in question.choice_set.all %}
+                <li>{{ choice.text }} - {{ choice.votes }} votes</li>
+            {% endfor %}
+            </ul>
+        </body>
+    </head>
+</html>
